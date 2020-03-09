@@ -1,3 +1,5 @@
+package entitas;
+
 public class Mahasiswa {
     // field, properties, variabel, atribut
     private String nim;
@@ -7,6 +9,13 @@ public class Mahasiswa {
     // constructor
     public Mahasiswa(String namaa) {
         nama = namaa;
+    }
+
+    public Mahasiswa(String nim, String nama, 
+            String kelas) {
+        this.nim = nim; 
+        this.nama = nama;
+        this.kelas = kelas;
     }
 
     public Mahasiswa() {
@@ -36,5 +45,17 @@ public class Mahasiswa {
 
     public String getNim() {
         return nim;
+    }
+
+    public String info() {
+        return "NIM: " + nim + "\n" +
+            "Nama: " + nama + "\n" +
+            "Kelas: " + kelas;
+    }
+
+    public void print() {
+        System.out.println("  NIM : " + nim);
+        System.out.println("  NAMA : " + nama);
+        System.out.println("  KELAS : " + kelas);
     }
 }
